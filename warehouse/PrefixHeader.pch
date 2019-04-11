@@ -1,0 +1,88 @@
+//
+//  PrefixHeader.pch
+//  warehouse
+//
+//  Created by 大橙子 on 2019/4/3.
+//  Copyright © 2019 Tomous. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef DEBUG
+#define DCLog(...) NSLog(__VA_ARGS__)
+#else
+#define DCLog(...)
+#endif
+
+#define DCLogFunc DCLog(@"%s",__func__);
+#define IMAGENAME(a) [UIImage imageNamed:a]
+#define FONT(a) [UIFont systemFontOfSize:a]
+// ios7
+#define iOS7 ([UIDevice currentDevice].systemVersion.doubleValue >= 7.0)
+
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+//宽高比例
+#define WIDTHSCALE6 ScreenWidth/375.0f
+#define HEIGHTSCALE6 ScreenHeight/667.0f
+
+#define DEFAULT [NSUserDefaults standardUserDefaults]
+#define NOTIFICATION [NSNotificationCenter defaultCenter]
+
+/** color */
+#define DCColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+/** rgb颜色转换（16进制->10进制）*/
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define BackgroundColor DCColor(245,244,245)
+#define BtnColor DCColor(117,154,249)
+#define BlueColor DCColor(55,109,246)
+//随机色
+#define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define RandomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+/** 导航栏颜色 */
+#define NavBgColor DCColor(255,255,255)
+
+//判断是否是iPhone
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+//判断是否是iPad
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define SCREEN_MAX_LENGTH (MAX(ScreenWidth, ScreenHeight))
+#define SCREEN_MIN_LENGTH (MIN(ScreenWidth, ScreenHeight))
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5_5S (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6_7_8 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P_7P_8P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define ISiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define ISiPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+#define ISiPhoneXS ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define ISiPhoneXS_MAX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+//异性全面屏
+#define   isFullScreen    (ISiPhoneX || ISiPhoneXR || ISiPhoneXS || ISiPhoneXS_MAX)
+#define navHeight (44.0f)//导航栏高度
+#define statusHeight (isFullScreen?44.0f:20.0f)//电池条高度
+#define tabbarHeight (isFullScreen?83.0f:49.0f)//tabBar高度
+#define bottomSafeHeight (isFullScreen?34.0f:0.0f)
+// 去除上下导航栏剩余中间视图高度
+#define ContentHeight   (ScreenHeight - navHeight - statusHeight- tabbarHeight - bottomSafeHeight)
+#define ViewHeight (ScreenHeight - navHeight - statusHeight- tabbarHeight)
+
+
+// app版本号
+#define DEVICE_APP_VERSION      (NSString *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
+//判断字符串是否为空
+#define Str_IsEmpty(str)    (((str) == nil) || ([(str) isEqual:[NSNull null]]) || ([@"" isEqualToString:(str)]))
+
+
+
+#import "dsbridge.h"
+#import "DCJsApi.h"
+#import "UIView+Extension.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "DCTool.h"
+#endif /* PrefixHeader_pch */
