@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DCBaseWebViewController : UIViewController<jsApiDelegate>
 @property (nonatomic,strong) DWKWebView *webView;
 @property (nonatomic,strong) DCJsApi *jsApi;
-@property (nonatomic,copy) NSString *requestURL;
 @end
 
 NS_ASSUME_NONNULL_END
