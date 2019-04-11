@@ -16,14 +16,13 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    DCHomeViewController *homeVC = [[DCHomeViewController alloc]init];
-    DCNavigationViewController *nav = [[DCNavigationViewController alloc]initWithRootViewController:homeVC];
-//    DCLoginViewController *loginVC = [[DCLoginViewController alloc]init];
-//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVC];
+//    DCHomeViewController *homeVC = [[DCHomeViewController alloc]init];
+//    DCNavigationViewController *nav = [[DCNavigationViewController alloc]initWithRootViewController:homeVC];
+    DCLoginViewController *loginVC = [[DCLoginViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginVC];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;

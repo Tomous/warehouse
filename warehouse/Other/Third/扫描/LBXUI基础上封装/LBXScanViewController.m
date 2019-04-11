@@ -115,14 +115,23 @@
             cropRect = [LBXScanView getScanRectWithPreView:self.view style:_style];
         }
         
-        NSArray *strCodes = @[AVMetadataObjectTypeQRCode];
-        self.title = @"二维码";
-        if(self.scanCodeType == ScanCodeTypeBar){
-            strCodes = @[AVMetadataObjectTypeEAN13Code,
-              AVMetadataObjectTypeEAN8Code,
-              AVMetadataObjectTypeCode128Code];
-            self.title = @"条形码";
-        }
+        NSArray *strCodes = @[AVMetadataObjectTypeQRCode,
+                              AVMetadataObjectTypeUPCECode,
+                              AVMetadataObjectTypeCode39Code,
+                              AVMetadataObjectTypeCode39Mod43Code,
+                              AVMetadataObjectTypeEAN13Code,
+                              AVMetadataObjectTypeEAN8Code,
+                              AVMetadataObjectTypeCode93Code,
+                              AVMetadataObjectTypeCode128Code,
+                              AVMetadataObjectTypePDF417Code,
+                              AVMetadataObjectTypeAztecCode];
+//        self.title = @"二维码";
+//        if(self.scanCodeType == ScanCodeTypeBar){
+//            strCodes = @[AVMetadataObjectTypeEAN13Code,
+//              AVMetadataObjectTypeEAN8Code,
+//              AVMetadataObjectTypeCode128Code];
+//            self.title = @"条形码";
+//        }
         
         //AVMetadataObjectTypeITF14Code 扫码效果不行,另外只能输入一个码制，虽然接口是可以输入多个码制
         self.scanObj = [[LBXScanNative alloc]initWithPreView:videoView ObjectType:strCodes cropRect:cropRect success:^(NSArray<LBXScanResult *> *array) {
@@ -280,22 +289,21 @@
 
 #pragma mark -> 闪光灯 点击
 
-- (void)openOrCloseFlash
+- (void)openOrCloseFlash:(UIButton *)btn
 {
     
     [_scanObj changeTorch];
     
-    self.isOpenFlash =!self.isOpenFlash;
-    
-    
-    if (self.isOpenFlash)
+    btn.selected = !btn.selected;
+
+    if (btn.selected)
     {
-//        [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_down"] forState:UIControlStateNormal];
+        [_btnFlash setImage:[UIImage imageNamed:@"scan_flash_select_1"] forState:UIControlStateNormal];
+    }else {
+
         [_btnFlash setImage:[UIImage imageNamed:@"scan_flash_normal_1"] forState:UIControlStateNormal];
     }
-    else
-//        [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_nor"] forState:UIControlStateNormal];
-        [_btnFlash setImage:[UIImage imageNamed:@"scan_flash_select_1"] forState:UIControlStateSelected];
+
 }
 
 
@@ -370,7 +378,7 @@
 //        [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_nor"] forState:UIControlStateNormal];
         [_btnFlash setImage:[UIImage imageNamed:@"scan_flash_normal_1"] forState:UIControlStateNormal];
         [_btnFlash setImage:[UIImage imageNamed:@"scan_flash_select_1"] forState:UIControlStateSelected];
-        [_btnFlash addTarget:self action:@selector(openOrCloseFlash) forControlEvents:UIControlEventTouchUpInside];
+        [_btnFlash addTarget:self action:@selector(openOrCloseFlash:) forControlEvents:UIControlEventTouchUpInside];
         
         //我的QR按钮
         self.btnMyQR = [[UIButton alloc]init];
