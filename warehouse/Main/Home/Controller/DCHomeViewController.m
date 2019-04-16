@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.backItem = [UIBarButtonItem creatBarButtonItemWithNorImageName:@"back" higImageName:@"back" target:self active:@selector(back)];
+
 }
 
 /** 初始化title，同步方法，及时返回H5结果 */
@@ -25,11 +25,6 @@
     DCNavTitleModel *model = [DCNavTitleModel mj_objectWithKeyValues:info];
     
     self.title = model.title;
-    if (![model.title isEqualToString:@"首页"] && ![model.title isEqualToString:@"基本资料"]) {
-        self.navigationItem.leftBarButtonItem = self.backItem;
-    }else{
-        self.navigationItem.leftBarButtonItem = nil;
-    }
     return [DCTool dictionaryToJson:@{@"errcode":@"0",@"errmsg":@"dsbridge success",@"data":@{}}];
 }
 
@@ -56,10 +51,4 @@
     
 }
 
-/** 返回 */
--(void)back {
-    if (self.webView.canGoBack) {
-        [self.webView goBack];
-    }
-}
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		405F4DBB83349D9CC40E9627 /* libPods-warehouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D83FFFD12790D4FF2B144B62 /* libPods-warehouse.a */; };
+		73A0304C226603660023D272 /* DCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A0304B226603660023D272 /* DCConst.m */; };
 		806F781E225482290043D635 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 806F781D225482290043D635 /* AppDelegate.m */; };
 		806F78262254822E0043D635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806F78252254822E0043D635 /* Assets.xcassets */; };
 		806F78292254822F0043D635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806F78272254822F0043D635 /* LaunchScreen.storyboard */; };
@@ -64,6 +65,8 @@
 /* Begin PBXFileReference section */
 		0C9E8997DD5FDB44E048DECB /* Pods-warehouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-warehouse.debug.xcconfig"; path = "Target Support Files/Pods-warehouse/Pods-warehouse.debug.xcconfig"; sourceTree = "<group>"; };
 		6F885C507D5311A0969FEBB3 /* Pods-warehouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-warehouse.release.xcconfig"; path = "Target Support Files/Pods-warehouse/Pods-warehouse.release.xcconfig"; sourceTree = "<group>"; };
+		73A0304A226603660023D272 /* DCConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCConst.h; sourceTree = "<group>"; };
+		73A0304B226603660023D272 /* DCConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCConst.m; sourceTree = "<group>"; };
 		806F7819225482290043D635 /* warehouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warehouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806F781C225482290043D635 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		806F781D225482290043D635 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				806F78652254829F0043D635 /* Home的副本 5 */,
 				806F78692254829F0043D635 /* Home的副本 4 */,
 				806F786D2254829F0043D635 /* Home的副本 3 */,
+				73A0304A226603660023D272 /* DCConst.h */,
+				73A0304B226603660023D272 /* DCConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -785,6 +790,7 @@
 				80806EC6225C895300DDF94E /* UIWindow+LBXHierarchy.m in Sources */,
 				806F782C2254822F0043D635 /* main.m in Sources */,
 				80806EBF225C895300DDF94E /* LBXScanLineAnimation.m in Sources */,
+				73A0304C226603660023D272 /* DCConst.m in Sources */,
 				806F781E225482290043D635 /* AppDelegate.m in Sources */,
 				806F7879225499450043D635 /* DCJsApi.m in Sources */,
 				80806ECA225C895300DDF94E /* LBXScanResult.m in Sources */,
