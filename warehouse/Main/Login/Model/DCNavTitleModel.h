@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *type;
 @property (nonatomic,copy) NSString *title_bar_color;
+@property (nonatomic,assign)BOOL isShowBack;
 @end
 
 NS_ASSUME_NONNULL_END

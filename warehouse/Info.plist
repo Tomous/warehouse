@@ -41,5 +41,10 @@
 	<string>扫描车辆信息服务中访问您的相册权限</string>
 	<key>NSCameraUsageDescription</key>
 	<string>扫描车辆信息服务中访问您的相机权限</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

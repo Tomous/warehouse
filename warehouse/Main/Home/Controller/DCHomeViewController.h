@@ -6,11 +6,11 @@
 //  Copyright © 2019 Tomous. All rights reserved.
 //
 
-#import "DCBaseWebViewController.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DCHomeViewController : DCBaseWebViewController
+@interface DCHomeViewController : UIViewController
 
 @end
 

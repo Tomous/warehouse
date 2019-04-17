@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DCNavTitleModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DCBaseWebViewController : UIViewController<jsApiDelegate>
-@property (nonatomic,strong) DWKWebView *webView;
-@property (nonatomic,strong) DCJsApi *jsApi;
-@property (nonatomic,copy) NSString *requestURL;
+@interface DCBaseWebViewController : UIViewController
+
+
 @end
 
 NS_ASSUME_NONNULL_END
