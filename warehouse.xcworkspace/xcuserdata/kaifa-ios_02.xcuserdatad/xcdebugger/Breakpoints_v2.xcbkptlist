@@ -22,13 +22,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "warehouse/Main/Home/Controller/DCHomeViewController.m"
-            timestampString = "577196936.102397"
+            timestampString = "577245946.002627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "-configWebViewBarSync:"
-            landmarkType = "7">
+            landmarkName = "DCHomeViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
