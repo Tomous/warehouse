@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		405F4DBB83349D9CC40E9627 /* libPods-warehouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D83FFFD12790D4FF2B144B62 /* libPods-warehouse.a */; };
-		730305A522689CBC009DD059 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730305A422689CBC009DD059 /* Images.xcassets */; };
 		73A0304C226603660023D272 /* DCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A0304B226603660023D272 /* DCConst.m */; };
 		806F781E225482290043D635 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 806F781D225482290043D635 /* AppDelegate.m */; };
 		806F78262254822E0043D635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806F78252254822E0043D635 /* Assets.xcassets */; };
@@ -66,7 +65,6 @@
 /* Begin PBXFileReference section */
 		0C9E8997DD5FDB44E048DECB /* Pods-warehouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-warehouse.debug.xcconfig"; path = "Target Support Files/Pods-warehouse/Pods-warehouse.debug.xcconfig"; sourceTree = "<group>"; };
 		6F885C507D5311A0969FEBB3 /* Pods-warehouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-warehouse.release.xcconfig"; path = "Target Support Files/Pods-warehouse/Pods-warehouse.release.xcconfig"; sourceTree = "<group>"; };
-		730305A422689CBC009DD059 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73A0304A226603660023D272 /* DCConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCConst.h; sourceTree = "<group>"; };
 		73A0304B226603660023D272 /* DCConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCConst.m; sourceTree = "<group>"; };
 		806F7819225482290043D635 /* warehouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warehouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,7 +208,6 @@
 				806F782A2254822F0043D635 /* Info.plist */,
 				806F782B2254822F0043D635 /* main.m */,
 				806F7871225484BB0043D635 /* PrefixHeader.pch */,
-				730305A422689CBC009DD059 /* Images.xcassets */,
 			);
 			path = warehouse;
 			sourceTree = "<group>";
@@ -698,7 +695,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				806F78292254822F0043D635 /* LaunchScreen.storyboard in Resources */,
-				730305A522689CBC009DD059 /* Images.xcassets in Resources */,
 				806F78262254822E0043D635 /* Assets.xcassets in Resources */,
 				80806EBC225C895300DDF94E /* CodeScan.bundle in Resources */,
 			);
@@ -979,7 +975,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.hyundai.warehouse;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.warehouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1000,7 +996,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.hyundai.warehouse;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.warehouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -33,10 +33,10 @@
     self.webView.navigationDelegate=self;
     [self.webView loadUrl:DCWebRUL];
     
-    self.webView.scrollView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
-        [self.webView.scrollView.mj_header endRefreshing];
-        [self.webView reload];
-    }];
+//    self.webView.scrollView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
+//        [self.webView.scrollView.mj_header endRefreshing];
+//        [self.webView reload];
+//    }];
     [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
     
 }

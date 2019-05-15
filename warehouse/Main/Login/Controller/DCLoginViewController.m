@@ -24,9 +24,11 @@
     [scanbtn addTarget:self action:@selector(btnDidClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanbtn];
 }
+
+
 -(void)btnDidClick {
     //条形码
-    __weak typeof(self) weakself = self;
+//    __weak typeof(self) weakself = self; 
     DCQRScanVC *scanVc = [DCQRScanVC ScanWithUIType:ScanUITypeZhiFuBao codeType:ScanCodeTypeBar scanType:ScanOtherType doneBlock:^(NSString *resultStr) {
         DCLog(@"resultStr---%@",resultStr);
     }];
