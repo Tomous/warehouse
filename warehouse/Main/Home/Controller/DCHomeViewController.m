@@ -32,6 +32,7 @@
     [self.webView setDebugMode:true];
     self.webView.navigationDelegate=self;
     [self.webView loadUrl:DCWebRUL];
+    self.webView.scrollView.bounces = NO;
     
 //    self.webView.scrollView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
 //        [self.webView.scrollView.mj_header endRefreshing];
@@ -113,5 +114,10 @@
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
-
+/**  加此方法是因为正式环境登录之后出现空白页bug，此方法是拦截请求地址URL，目前是不管什么连接都允许通行 */
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    DCLog(@"url----%@",navigationAction.request.URL);
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
 @end
