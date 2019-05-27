@@ -114,6 +114,7 @@
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
+//zhushi
 /**
   选择照片
   
