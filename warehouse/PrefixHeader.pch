@@ -86,4 +86,5 @@
 #import "UIBarButtonItem+Extension.h"
 #import "DCTool.h"
 #import "DCConst.h"
+#import "TZImagePickerController.h"
 #endif /* PrefixHeader_pch */

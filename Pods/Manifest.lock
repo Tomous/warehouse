@@ -5,6 +5,7 @@ PODS:
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
   - SVProgressHUD (2.2.5)
+  - TZImagePickerController (3.2.0)
 
 DEPENDENCIES:
   - dsBridge
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - SVProgressHUD
+  - TZImagePickerController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - SVProgressHUD
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TZImagePickerController: 7850b158d025065b162a1a963d445040b828abc9
 
-PODFILE CHECKSUM: eaf31d21b755a84475145d7eea63326e148ec8b9
+PODFILE CHECKSUM: 65e7b2393d502c33449c633eb734dbc1a15a1678
 
 COCOAPODS: 1.6.0

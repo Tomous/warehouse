@@ -6,4 +6,5 @@ pod 'Masonry'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
 pod 'MJExtension'
+pod 'TZImagePickerController'
 end
