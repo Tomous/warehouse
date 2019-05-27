@@ -33,6 +33,8 @@
     //    self.navigationBar.translucent = NO;
     
     //    [self.navigationBar setBackgroundImage:IMAGENAME(@"navigationbarBackgroundWhite") forBarMetrics:UIBarMetricsDefault];
+    /**  去掉导航栏下面的黑线 */
+    [self.navigationBar setShadowImage:[UIImage new]];
 }
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {

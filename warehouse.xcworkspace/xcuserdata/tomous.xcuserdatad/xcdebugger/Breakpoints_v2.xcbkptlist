@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "warehouse/Main/Home/Controller/DCHomeViewController.m"
-            timestampString = "576594763.750297"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-configWebViewMenuSync:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "warehouse/Other/Third/&#x626b;&#x63cf;/LBXUI&#x57fa;&#x7840;&#x4e0a;&#x5c01;&#x88c5;/LBXScanViewController.m"
             timestampString = "576663304.801092"
             startingColumnNumber = "9223372036854775807"
